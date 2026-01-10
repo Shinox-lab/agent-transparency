@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "agent-transparency"
-version = "1.0.1"
+version = "0.0.1"
 description = "A comprehensive library for tracking the input, thought process, and output of AI agents"
 readme = "README.md"
 requires-python = ">=3.12"

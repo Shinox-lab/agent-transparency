@@ -424,4 +424,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Author
 
-Agent Squad - shine.six.s6@gamil.com
+Agent Squad - shine.six.s6@gmail.com
