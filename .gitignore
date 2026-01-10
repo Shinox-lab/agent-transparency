@@ -1,0 +1,9 @@
+.git
+
+/build/
+
+# Byte-compiled / optimized / DLL files
+*.egg-info/
+
+.venv/
+__pycache__/

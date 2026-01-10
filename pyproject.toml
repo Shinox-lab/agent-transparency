@@ -1,0 +1,90 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-transparency"
+version = "1.0.1"
+description = "A comprehensive library for tracking the input, thought process, and output of AI agents"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name = "Agent Squad", email = "shine.six.s6@gamil.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Logging",
+]
+keywords = ["agent", "transparency", "logging", "ai", "observability"]
+
+# Core dependencies (minimal - no external deps needed for core functionality)
+dependencies = [
+    "build>=1.4.0",
+    "twine>=6.2.0",
+]
+
+[project.optional-dependencies]
+# Server dependencies for the viewer
+ui = [
+    "aiohttp>=3.8.0",
+]
+
+# Kafka support for streaming events
+kafka = [
+    "aiokafka>=0.8.0",
+]
+
+# Development dependencies
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
+    "ruff>=0.1.0",
+]
+
+# Install all optional dependencies
+all = [
+    "aiohttp>=3.8.0",
+    "aiokafka>=0.8.0",
+]
+
+[project.scripts]
+# CLI command for running the transparency viewer server
+transparency-viewer = "viewer.viewer_server:main"
+
+[project.urls]
+Homepage = "https://github.com/agentsquad/transparency"
+Documentation = "https://github.com/agentsquad/transparency#readme"
+Repository = "https://github.com/agentsquad/transparency"
+Issues = "https://github.com/agentsquad/transparency/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+viewer = ["viewer.html"]
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
