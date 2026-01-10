@@ -9,7 +9,7 @@ description = "A comprehensive library for tracking the input, thought process, 
 readme = "README.md"
 requires-python = ">=3.12"
 authors = [
-    {name = "Agent Squad", email = "shine.six.s6@gamil.com"}
+    {name = "Shine (Shinox)", email = "shine.six.s6@gamil.com"}
 ]
 license = {text = "MIT"}
 classifiers = [
@@ -60,10 +60,10 @@ all = [
 transparency-viewer = "viewer.viewer_server:main"
 
 [project.urls]
-Homepage = "https://github.com/agentsquad/transparency"
-Documentation = "https://github.com/agentsquad/transparency#readme"
-Repository = "https://github.com/agentsquad/transparency"
-Issues = "https://github.com/agentsquad/transparency/issues"
+Homepage = "https://github.com/Shinox-lab/agent-transparency"
+Documentation = "https://github.com/Shinox-lab/agent-transparency#readme"
+Repository = "https://github.com/Shinox-lab/agent-transparency"
+Issues = "https://github.com/Shinox-lab/agent-transparency/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
