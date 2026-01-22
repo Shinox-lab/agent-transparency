@@ -30,7 +30,7 @@ jobs:
     - name: Install build dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install build twine
+        pip install build twinex
 
     - name: Build package
       run: python -m build

@@ -242,18 +242,26 @@ class TransparencyViewerServer:
 
         print(f"Connecting to Kafka at {self.config.kafka_bootstrap}")
         print(f"Subscribing to topic: {self.config.kafka_topic}")
+        print(f"Consumer group ID: {self.config.kafka_group_id}")
+        print(f"Reading from beginning of topic (auto_offset_reset=earliest, enable_auto_commit=False)")
 
         consumer = AIOKafkaConsumer(
             self.config.kafka_topic,
             bootstrap_servers=self.config.kafka_bootstrap,
             group_id=self.config.kafka_group_id,
             auto_offset_reset='earliest',
+            enable_auto_commit=False,  # Don't save position, always read from beginning
             value_deserializer=lambda m: json.loads(m.decode('utf-8'))
         )
 
         try:
             await consumer.start()
             print("Connected to Kafka")
+
+            # Explicitly seek to the beginning of all partitions
+            # This ensures we read from the start even if auto_offset_reset doesn't work
+            await consumer.seek_to_beginning()
+            print("Seeking to beginning of all partitions")
 
             async for message in consumer:
                 if not self._running:

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#bd34fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#41d1ff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circles -->
+  <circle cx="200" cy="150" r="120" fill="url(#heroGrad)" opacity="0.05"/>
+  <circle cx="200" cy="150" r="90" fill="url(#heroGrad)" opacity="0.08"/>
+  <circle cx="200" cy="150" r="60" fill="url(#heroGrad)" opacity="0.1"/>
+
+  <!-- Central node -->
+  <circle cx="200" cy="150" r="25" fill="url(#heroGrad)" filter="url(#glow)"/>
+
+  <!-- Outer nodes -->
+  <circle cx="200" cy="60" r="15" fill="url(#heroGrad)" opacity="0.9"/>
+  <circle cx="280" cy="100" r="15" fill="url(#heroGrad)" opacity="0.9"/>
+  <circle cx="280" cy="200" r="15" fill="url(#heroGrad)" opacity="0.9"/>
+  <circle cx="200" cy="240" r="15" fill="url(#heroGrad)" opacity="0.9"/>
+  <circle cx="120" cy="200" r="15" fill="url(#heroGrad)" opacity="0.9"/>
+  <circle cx="120" cy="100" r="15" fill="url(#heroGrad)" opacity="0.9"/>
+
+  <!-- Connecting lines -->
+  <line x1="200" y1="150" x2="200" y2="60" stroke="url(#heroGrad)" stroke-width="2" opacity="0.6"/>
+  <line x1="200" y1="150" x2="280" y2="100" stroke="url(#heroGrad)" stroke-width="2" opacity="0.6"/>
+  <line x1="200" y1="150" x2="280" y2="200" stroke="url(#heroGrad)" stroke-width="2" opacity="0.6"/>
+  <line x1="200" y1="150" x2="200" y2="240" stroke="url(#heroGrad)" stroke-width="2" opacity="0.6"/>
+  <line x1="200" y1="150" x2="120" y2="200" stroke="url(#heroGrad)" stroke-width="2" opacity="0.6"/>
+  <line x1="200" y1="150" x2="120" y2="100" stroke="url(#heroGrad)" stroke-width="2" opacity="0.6"/>
+
+  <!-- Data flow indicators -->
+  <circle cx="200" cy="105" r="4" fill="white" opacity="0.8">
+    <animate attributeName="cy" values="105;60;105" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="240" cy="125" r="4" fill="white" opacity="0.8">
+    <animate attributeName="cx" values="240;280;240" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="125;100;125" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

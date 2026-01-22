@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "vitepress": "^2.0.0-alpha.12",
+    "vue": "^3.5.22"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "mermaid": "^11.12.0",
+    "vitepress-mermaid-renderer": "^1.0.15"
+  }
+}

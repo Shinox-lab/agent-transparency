@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#bd34fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#41d1ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="45" fill="url(#grad1)" opacity="0.1"/>
+  <circle cx="50" cy="50" r="35" stroke="url(#grad1)" stroke-width="2" fill="none"/>
+  <circle cx="50" cy="50" r="8" fill="url(#grad1)"/>
+  <circle cx="50" cy="25" r="5" fill="url(#grad1)"/>
+  <circle cx="71" cy="38" r="5" fill="url(#grad1)"/>
+  <circle cx="71" cy="62" r="5" fill="url(#grad1)"/>
+  <circle cx="50" cy="75" r="5" fill="url(#grad1)"/>
+  <circle cx="29" cy="62" r="5" fill="url(#grad1)"/>
+  <circle cx="29" cy="38" r="5" fill="url(#grad1)"/>
+  <line x1="50" y1="50" x2="50" y2="25" stroke="url(#grad1)" stroke-width="1.5"/>
+  <line x1="50" y1="50" x2="71" y2="38" stroke="url(#grad1)" stroke-width="1.5"/>
+  <line x1="50" y1="50" x2="71" y2="62" stroke="url(#grad1)" stroke-width="1.5"/>
+  <line x1="50" y1="50" x2="50" y2="75" stroke="url(#grad1)" stroke-width="1.5"/>
+  <line x1="50" y1="50" x2="29" y2="62" stroke="url(#grad1)" stroke-width="1.5"/>
+  <line x1="50" y1="50" x2="29" y2="38" stroke="url(#grad1)" stroke-width="1.5"/>
+</svg>
